@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Module04_TP01.MainPage">
+
+    <StackLayout >
+        <Grid BackgroundColor="#58B0F0" Padding="10,25">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Nouveau" Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Start" TextColor="White"></Label>
+            <Label Text="Accueil" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="White"></Label>
+            <Label Text="Rechercher" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" TextColor="White"></Label>
+        </Grid>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                    <!--Création d'un content view pour le block noir-->
+                    <ContentView Margin="10" WidthRequest="75" HeightRequest="75" BackgroundColor="Black"></ContentView>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Romain" TextColor="Black"></Label>
+                            <Label Text="@toto" TextColor="Black"></Label>
+                            <Label Text="50s" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
+                        </StackLayout>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis. " TextColor="Black"></Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Répondre" HorizontalOptions="CenterAndExpand" TextColor="Black" ></Label>
+                    <Label Text="Retweet" HorizontalOptions="CenterAndExpand" TextColor="Black"></Label>
+                    <Label Text="Favoris" HorizontalOptions="CenterAndExpand" TextColor="Black"></Label>
+                </StackLayout>
+                <Label BackgroundColor="Gray" HeightRequest="0.1" ></Label>
+            </StackLayout>
+        </ScrollView>
+        <Grid Padding="0,75">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Fil" Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand" ></Label>
+            <Label Text="Notifications" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Text="Messages" Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand"></Label>
+            <Label Text="Moi" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand"></Label>
+        </Grid>
+    </StackLayout>
+
+
+</ContentPage>
