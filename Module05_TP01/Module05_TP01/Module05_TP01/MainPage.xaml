@@ -29,11 +29,11 @@
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Image Source="pencil.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="StartAndExpand" WidthRequest="25"></Image>
+                <ImageButton Source="pencil.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="StartAndExpand" WidthRequest="25"></ImageButton>
                 <!--<Label Grid.Row="0" Grid.Column="0" TextColor="White" Text="Nouveau" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>-->
                 <Label Grid.Row="0" Grid.Column="1" TextColor="White" FontAttributes="Bold" FontSize="20" Text="Accueil" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>
                 <!--<Label Grid.Row="0" Grid.Column="2" TextColor="White" Text="Rechercher" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"></Label>-->
-                <Image Source="search.png" Grid.Row="0" Grid.Column="2" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" MinimumWidthRequest="25"></Image>
+                <ImageButton Source="search.png" Grid.Row="0" Grid.Column="2" Aspect="AspectFit" VerticalOptions="Center" HorizontalOptions="EndAndExpand" MinimumWidthRequest="25"></ImageButton>
             </Grid>
         </ContentView>
         <ContentView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
@@ -84,9 +84,9 @@ convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis." Grid.Row
                     <ContentView>
                         <!--<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">-->
                         <StackLayout Orientation="Horizontal">
-                            <Image Source="reply.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="30" WidthRequest="30"></Image>
-                            <Image Source="retweet.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="30" WidthRequest="30"></Image>
-                            <Image Source="favorite.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="30" WidthRequest="30"></Image>
+                            <ImageButton Source="reply.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="30" WidthRequest="30"></ImageButton>
+                            <ImageButton Source="retweet.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="30" WidthRequest="30"></ImageButton>
+                            <ImageButton Source="favorite.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HeightRequest="30" WidthRequest="30"></ImageButton>
                             <!--<Label TextColor="Black" Text="Répondre" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>-->
                             <!--<Label TextColor="Black" Text="Retweet" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>-->
                             <!--<Label TextColor="Black" Text="Favoris" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"></Label>-->
