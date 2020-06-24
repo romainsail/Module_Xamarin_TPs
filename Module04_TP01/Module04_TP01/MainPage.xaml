@@ -7,6 +7,7 @@
              x:Class="Module04_TP01.MainPage">
 
     <StackLayout >
+        <!-- banniere du haut -->
         <Grid BackgroundColor="#58B0F0" Padding="10,25">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -20,6 +21,7 @@
             <Label Text="Accueil" Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="White"></Label>
             <Label Text="Rechercher" Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="End" TextColor="White"></Label>
         </Grid>
+        <!--ScrollView qui va contenir tous nos "tweet"-->
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical">
                 <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
