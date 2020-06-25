@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 using Tp3.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Tp3.Models
@@ -30,34 +31,36 @@ namespace Tp3.Models
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            var ori = DeviceDisplay.MainDisplayInfo.Orientation;
+            Debug.WriteLine("orientation");
+            Debug.WriteLine("orientation" + ori);
+
             Debug.WriteLine("btn clicked");
-            if (this.IsValid())
-            {
+            var current = Connectivity.NetworkAccess;
+            Debug.WriteLine("Internet : " + current);
+
+
+
                 this.Error.Hide();
-                if (twitterService.authenticate(this.Login.Text, this.Password.Text))
+                if (this.IsValid())
                 {
-                    this.VisibilitySwitch.Switch();
+                    if (twitterService.authenticate(this.Login.Text, this.Password.Text))
+                    {
+                        this.VisibilitySwitch.Switch();
+                    }
+                    else
+                    {
+                        this.Error.Error = "Votre combinaison Login Password n'a pas été reconnu";
+                        this.Error.Display();
+                    }
                 }
                 else
                 {
-                    this.Error.Error = "Votre combinaison Login Password n'a pas été reconnu";
                     this.Error.Display();
                 }
-            }
-            else
-            {
-                this.Error.Display();
-            }
 
 
-        }
-
-        public StringBuilder IsAuthenticateValid()
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.Append("Votre combinaison Login Password n'a pas été reconnu");
-            return stringBuilder;
-
+            
         }
 
         public Boolean IsValid()
