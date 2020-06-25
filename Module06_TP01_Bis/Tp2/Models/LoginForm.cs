@@ -24,5 +24,9 @@ namespace Tp2.Models
             IsRemind = isRemind;
             VisibilitySwitch = visibilitySwitch;
         }
+
+        public LoginForm()
+        {
+        }
     }
 }

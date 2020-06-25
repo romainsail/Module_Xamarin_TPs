@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Tp2.Models;
 using Xamarin.Forms;
 
 namespace Tp2
@@ -17,6 +18,7 @@ namespace Tp2
     {
         public MainPage()
         {
+            //new LoginForm();
             InitializeComponent();
         }
 
@@ -33,12 +35,12 @@ namespace Tp2
             hideError();
             hideTweet();
 
-            if (login == null || login.Length < 3)
+            if (String.IsNullOrEmpty(login) || login.Length < 3)
             {
                 showError("Votre login n'est pas correct !");
                 return;
             }
-            if (password == null || password.Length < 6 )
+            if ( String.IsNullOrEmpty(password) || password.Length < 6 )
             {
                 showError("Votre mot de passe doit contenir plus de 6 caractères !");
                 return;
